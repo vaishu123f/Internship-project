@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="blog.css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+  <body>
+    <section class="sub-header2">
+      <nav>
+        <a href="index.html"><img src="images/logo1.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Logo(about).html">ABOUT</a></li>
+            <li><a href="course.html">PROGRAMMES</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="admission.html">ADMISSIONS</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Our Blog</h1>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="about-us">
+      <div class="row">
+        <div class="about-col">
+          <h1>Latest Updates & Events</h1>
+          <p>
+            Stay updated with the latest news from our university – seminars, workshops,
+            cultural events, and academic achievements by our students and faculty.
+          </p>
+        </div>
+        <div class="about-col">
+          <img src="images/hblog.jpeg" alt="University students">
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="course">
+      <h1 class="course-font">Recent Blog Posts</h1>
+      <p>Discover the latest happenings at our university</p>
+
+      <div class="row">
+        <!-- Blog Post 1 -->
+        <a href="blog-post-1.html" class="course-col blog-card-link">
+          <img src="images/blog1.jpeg" alt="Library" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+          <h3>New Library Wing Inaugurated</h3>
+          <p>Our state-of-the-art digital library is now open with extended seating capacity, modern study pods, and access to thousands of digital resources. Students can now enjoy 24/7 access to study materials.</p>
+          <span class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Blog Post 2 -->
+        <a href="blog-post-2.html" class="course-col blog-card-link">
+          <img src="images/blog2.jpeg" alt="Tech Fest" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+          <h3>Annual Tech Fest Highlights</h3>
+          <p>Students showcased innovative projects in AI, IoT, and web development. The event featured guest speakers from leading tech companies and hands-on workshops for participants.</p>
+          <span class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Blog Post 3 -->
+        <a href="blog-post-3.html" class="course-col blog-card-link">
+          <img src="images/blog3.jpeg" alt="Graduation" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+          <h3>Graduation Ceremony 2025</h3>
+          <p>Congratulations to our graduating batch on successfully completing their journey. Over 500 students received their degrees in various disciplines, marking a milestone in their academic careers.</p>
+          <span class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="row blog-row-second">
+        <!-- Blog Post 4 -->
+        <a href="blog-post-4.html" class="course-col blog-card-link">
+          <img src="images/blog4.jpeg" alt="Workshop" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+          <h3>Industry Workshop Series</h3>
+          <p>Leading industry experts conducted workshops on emerging technologies, career guidance, and professional development. Students gained valuable insights into real-world applications of their studies.</p>
+          <span class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Blog Post 5 -->
+        <a href="blog-post-5.html" class="course-col blog-card-link">
+          <img src="images/blog5.jpeg" alt="Campus" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+          <h3>Campus Infrastructure Upgrade</h3>
+          <p>Major renovations completed across campus including new laboratories, upgraded classrooms with smart boards, and enhanced sports facilities. The improvements aim to provide a better learning environment.</p>
+          <span class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Blog Post 6 -->
+        <a href="blog-post-6.html" class="course-col blog-card-link">
+          <img src="images/blog7.jpeg" alt="Research" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+          <h3>Research Publication Milestone</h3>
+          <p>Our faculty and students published over 100 research papers in international journals this year. The research spans various fields including engineering, medicine, and social sciences.</p>
+          <span class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <h4>Blog</h4>
+      <p>
+        Founded in 1995 Acharya aims to revolutionize education. With over 15,000 students and 50+ academic programs annually, it stands among the global education elite. Located in India's technical hub, Bangalore, Acharya prioritizes innovation and knowledge. The campus is spread across 80-acres and houses a centralized library, state-of-the-art laboratories, and a 10,000+ seating stadium along with academic blocks. <br>The institution fosters experiential and collaborative learning, shaping well-rounded individuals, evident in its diverse student population from 55+ countries.
+      </p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook-messenger"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </section>
+
+    <!-- Javascript for Toggle Menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

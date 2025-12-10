@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form - University</title>
+    <link rel="stylesheet" type="text/css" href="admission.css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+  <body>
+    <section class="sub-header-admission">
+      <nav>
+        <a href="index.html"><img src="images/logo1.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Logo(about).html">ABOUT</a></li>
+            <li><a href="course.html">PROGRAMMES</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="admission.html">ADMISSIONS</a></li>
+            
+        </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Admission Form</h1>
+    </section>
+
+    <!-- Admission Form Section -->
+    <section class="admission-form-section">
+      <div class="form-container">
+        <form id="admissionForm" class="admission-form">
+          
+          <!-- Personal Information -->
+          <div class="form-group">
+            <h2 class="form-section-title">Personal Information</h2>
+            
+            <div class="form-row">
+              <div class="form-field">
+                <label for="studentName">Student Name <span class="required">*</span></label>
+                <input type="text" id="studentName" name="studentName" required>
+              </div>
+              
+              <div class="form-field">
+                <label for="fatherName">Father Name <span class="required">*</span></label>
+                <input type="text" id="fatherName" name="fatherName" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="motherName">Mother Name <span class="required">*</span></label>
+                <input type="text" id="motherName" name="motherName" required>
+              </div>
+              
+              <div class="form-field">
+                <label for="dob">Date of Birth <span class="required">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="gender">Gender <span class="required">*</span></label>
+                <select id="gender" name="gender" required>
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-field">
+                <label for="religion">Religion <span class="required">*</span></label>
+                <select id="religion" name="religion" required>
+                  <option value="">Select Religion</option>
+                  <option value="hindu">Hindu</option>
+                  <option value="muslim">Muslim</option>
+                  <option value="christian">Christian</option>
+                  <option value="sikh">Sikh</option>
+                  <option value="buddhist">Buddhist</option>
+                  <option value="jain">Jain</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="nationality">Nationality <span class="required">*</span></label>
+                <input type="text" id="nationality" name="nationality" value="Indian" required>
+              </div>
+              
+              <div class="form-field">
+                <label for="status">Status <span class="required">*</span></label>
+                <select id="status" name="status" required>
+                  <option value="">Select Status</option>
+                  <option value="single">Single</option>
+                  <option value="married">Married</option>
+                  <option value="divorced">Divorced</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Information -->
+          <div class="form-group">
+            <h2 class="form-section-title">Address Information</h2>
+            
+            <div class="form-row">
+              <div class="form-field">
+                <label for="district">District <span class="required">*</span></label>
+                <select id="district" name="district" required>
+                  <option value="">Select District</option>
+                  <option value="bagalkot">Bagalkot</option>
+                  <option value="ballari">Ballari</option>
+                  <option value="belagavi">Belagavi</option>
+                  <option value="bengaluru-rural">Bengaluru Rural</option>
+                  <option value="bengaluru-urban">Bengaluru Urban</option>
+                  <option value="bidar">Bidar</option>
+                  <option value="chamarajanagar">Chamarajanagar</option>
+                  <option value="chikkaballapur">Chikkaballapur</option>
+                  <option value="chikkamagaluru">Chikkamagaluru</option>
+                  <option value="chitradurga">Chitradurga</option>
+                  <option value="dakshina-kannada">Dakshina Kannada</option>
+                  <option value="davangere">Davangere</option>
+                  <option value="dharwad">Dharwad</option>
+                  <option value="gadag">Gadag</option>
+                  <option value="hassan">Hassan</option>
+                  <option value="haveri">Haveri</option>
+                  <option value="kalaburagi">Kalaburagi</option>
+                  <option value="kodagu">Kodagu</option>
+                  <option value="kolar">Kolar</option>
+                  <option value="koppal">Koppal</option>
+                  <option value="mandya">Mandya</option>
+                  <option value="mysuru">Mysuru</option>
+                  <option value="raichur">Raichur</option>
+                  <option value="ramanagara">Ramanagara</option>
+                  <option value="shivamogga">Shivamogga</option>
+                  <option value="tumakuru">Tumakuru</option>
+                  <option value="udupi">Udupi</option>
+                  <option value="uttara-kannada">Uttara Kannada</option>
+                  <option value="vijayapura">Vijayapura</option>
+                  <option value="vijayanagara">Vijayanagara</option>
+                  <option value="yadgir">Yadgir</option>
+                </select>
+              </div>
+              
+              <div class="form-field">
+                <label for="state">State <span class="required">*</span></label>
+                <select id="state" name="state" required>
+                  <option value="">Select State</option>
+                  <option value="andhra-pradesh">Andhra Pradesh</option>
+                  <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                  <option value="assam">Assam</option>
+                  <option value="bihar">Bihar</option>
+                  <option value="chhattisgarh">Chhattisgarh</option>
+                  <option value="goa">Goa</option>
+                  <option value="gujarat">Gujarat</option>
+                  <option value="haryana">Haryana</option>
+                  <option value="himachal-pradesh">Himachal Pradesh</option>
+                  <option value="jharkhand">Jharkhand</option>
+                  <option value="karnataka" selected>Karnataka</option>
+                  <option value="kerala">Kerala</option>
+                  <option value="madhya-pradesh">Madhya Pradesh</option>
+                  <option value="maharashtra">Maharashtra</option>
+                  <option value="manipur">Manipur</option>
+                  <option value="meghalaya">Meghalaya</option>
+                  <option value="mizoram">Mizoram</option>
+                  <option value="nagaland">Nagaland</option>
+                  <option value="odisha">Odisha</option>
+                  <option value="punjab">Punjab</option>
+                  <option value="rajasthan">Rajasthan</option>
+                  <option value="sikkim">Sikkim</option>
+                  <option value="tamil-nadu">Tamil Nadu</option>
+                  <option value="telangana">Telangana</option>
+                  <option value="tripura">Tripura</option>
+                  <option value="uttar-pradesh">Uttar Pradesh</option>
+                  <option value="uttarakhand">Uttarakhand</option>
+                  <option value="west-bengal">West Bengal</option>
+                  <option value="andaman-nicobar">Andaman and Nicobar Islands</option>
+                  <option value="chandigarh">Chandigarh</option>
+                  <option value="dadra-nagar-haveli">Dadra and Nagar Haveli</option>
+                  <option value="daman-diu">Daman and Diu</option>
+                  <option value="delhi">Delhi</option>
+                  <option value="lakshadweep">Lakshadweep</option>
+                  <option value="puducherry">Puducherry</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="form-group">
+            <h2 class="form-section-title">Contact Information</h2>
+            
+            <div class="form-row">
+              <div class="form-field phone-field">
+                <label for="phoneCode">Phone Code <span class="required">*</span></label>
+                <select id="phoneCode" name="phoneCode" required>
+                  <option value="+91" selected>+91 (India)</option>
+                  <option value="+1">+1 (USA/Canada)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+61">+61 (Australia)</option>
+                  <option value="+971">+971 (UAE)</option>
+                  <option value="+65">+65 (Singapore)</option>
+                  <option value="+86">+86 (China)</option>
+                  <option value="+81">+81 (Japan)</option>
+                  <option value="+49">+49 (Germany)</option>
+                  <option value="+33">+33 (France)</option>
+                  <option value="+7">+7 (Russia)</option>
+                  <option value="+92">+92 (Pakistan)</option>
+                  <option value="+880">+880 (Bangladesh)</option>
+                  <option value="+94">+94 (Sri Lanka)</option>
+                  <option value="+977">+977 (Nepal)</option>
+                </select>
+              </div>
+              
+              <div class="form-field phone-number-field">
+                <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="10 digit number" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Information -->
+          <div class="form-group">
+            <h2 class="form-section-title">Course Information</h2>
+            
+            <div class="form-row">
+              <div class="form-field">
+                <label for="selectCourse">Select Course <span class="required">*</span></label>
+                <select id="selectCourse" name="selectCourse" required onchange="updateCourseName()">
+                  <option value="">Select Course Type</option>
+                  <option value="undergraduate">Under Graduate</option>
+                  <option value="postgraduate">Post Graduate</option>
+                  <option value="diploma">Diploma</option>
+                </select>
+              </div>
+              
+              <div class="form-field">
+                <label for="courseName">Course Name <span class="required">*</span></label>
+                <select id="courseName" name="courseName" required>
+                  <option value="">First select course type</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-submit">
+            <button type="submit" class="submit-btn">Submit Application</button>
+            <button type="reset" class="reset-btn">Reset Form</button>
+            <a href="payment.html" class="proceed-payment-btn" id="proceedPaymentBtn" style="display: none;">
+              <i class="fa-solid fa-arrow-right"></i> Proceed to Payment
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <h4>About Us</h4>
+        <p>Founded in 1995 Acharya aims to revolutionize education. With over 15,000 students and 50+ academic programs annually, it stands among the global education elite. Located in India's technical hub, Bangalore, Acharya prioritizes innovation and knowledge. The campus is spread across 80-acres and houses a centralized library, state-of-the-art laboratories,  and a 10,000+ seating stadium along with academic blocks. <br>The institution fosters experiential and collaborative learning, shaping well-rounded individuals, evident in its diverse student population from 55+ countries.</p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook-messenger"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </section>
+
+    <!-- Javascript -->
+    <script>
+      // Toggle Menu
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+      // Dynamic Course Name Dropdown
+      function updateCourseName() {
+        const selectCourse = document.getElementById("selectCourse").value;
+        const courseName = document.getElementById("courseName");
+        
+        // Clear existing options
+        courseName.innerHTML = '<option value="">Select Course Name</option>';
+        
+        if (selectCourse === "undergraduate") {
+          const ugCourses = [
+            { value: "bca", text: "BCA" },
+            { value: "bsc", text: "B.Sc" },
+            { value: "ba", text: "BA" },
+            { value: "bcom", text: "B.Com" },
+            { value: "bba", text: "BBA" },
+            { value: "be", text: "B.E" }
+          ];
+          ugCourses.forEach(course => {
+            const option = document.createElement("option");
+            option.value = course.value;
+            option.textContent = course.text;
+            courseName.appendChild(option);
+          });
+        } else if (selectCourse === "postgraduate") {
+          const pgCourses = [
+            { value: "mca", text: "MCA" },
+            { value: "msc", text: "M.Sc" },
+            { value: "mcom", text: "M.Com" },
+            { value: "ma", text: "MA" },
+            { value: "mba", text: "MBA" },
+            { value: "me", text: "M.E" }
+          ];
+          pgCourses.forEach(course => {
+            const option = document.createElement("option");
+            option.value = course.value;
+            option.textContent = course.text;
+            courseName.appendChild(option);
+          });
+        } else if (selectCourse === "diploma") {
+          const diplomaCourses = [
+            { value: "diploma-cs", text: "Diploma in Computer Science" },
+            { value: "diploma-mechanical", text: "Diploma in Mechanical" },
+            { value: "diploma-civil", text: "Diploma in Civil" },
+            { value: "cert-web-dev", text: "Certification in Web Development" },
+            { value: "diploma-electronics", text: "Diploma in Electronics" },
+            { value: "diploma-electrical", text: "Diploma in Electrical" },
+            { value: "cert-data-science", text: "Certification in Data Science" },
+            { value: "cert-cyber-security", text: "Certification in Cyber Security" }
+          ];
+          diplomaCourses.forEach(course => {
+            const option = document.createElement("option");
+            option.value = course.value;
+            option.textContent = course.text;
+            courseName.appendChild(option);
+          });
+        }
+      }
+
+      // Form Submission
+      document.getElementById("admissionForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+          studentName: document.getElementById("studentName").value,
+          fatherName: document.getElementById("fatherName").value,
+          motherName: document.getElementById("motherName").value,
+          dob: document.getElementById("dob").value,
+          gender: document.getElementById("gender").value,
+          district: document.getElementById("district").value,
+          state: document.getElementById("state").value,
+          religion: document.getElementById("religion").value,
+          nationality: document.getElementById("nationality").value,
+          phoneCode: document.getElementById("phoneCode").value,
+          phoneNumber: document.getElementById("phoneNumber").value,
+          email: document.getElementById("email").value,
+          status: document.getElementById("status").value,
+          selectCourse: document.getElementById("selectCourse").value,
+          courseName: document.getElementById("courseName").value
+        };
+        
+        // Generate application number
+        const applicationNumber = "APP" + new Date().getFullYear() + Math.floor(1000 + Math.random() * 9000);
+        formData.applicationNumber = applicationNumber;
+        
+        // Save to localStorage
+        localStorage.setItem("admissionData", JSON.stringify(formData));
+        
+        // Set flag to indicate coming from admission page
+        sessionStorage.setItem("fromAdmission", "true");
+        
+        // Show success message and proceed to payment button
+        alert("Admission form submitted successfully!\nApplication Number: " + applicationNumber + "\n\nYou can now proceed to payment.");
+        
+        // Show proceed to payment button
+        document.getElementById("proceedPaymentBtn").style.display = "inline-block";
+        
+        // Optional: Auto-redirect to payment page after 2 seconds
+        // setTimeout(function() {
+        //   window.location.href = "payment.html";
+        // }, 2000);
+      });
+    </script>
+  </body>
+</html>
+

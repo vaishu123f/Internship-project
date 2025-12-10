@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - University</title>
+    <link rel="stylesheet" type="text/css" href="payment.css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+  <body>
+    <section class="sub-header-payment">
+      <nav>
+        <a href="index.html"><img src="images/logo1.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Logo(about).html">ABOUT</a></li>
+            <li><a href="course.html">PROGRAMMES</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="admission.html">ADMISSIONS</a></li>
+            
+        </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1><i class="fa-solid fa-credit-card"></i> Payment Portal</h1>
+    </section>
+
+    <!-- Payment Form Section -->
+    <section class="payment-section">
+      <div class="payment-container">
+        <div class="payment-wrapper">
+          
+          <!-- Left Side - Payment Form -->
+          <div class="payment-form-container">
+            <h2 class="form-title"><i class="fa-solid fa-wallet"></i> Payment Details</h2>
+            
+            <form id="paymentForm" class="payment-form">
+              
+              <!-- Student Information -->
+              <div class="form-group">
+                <label for="studentName"><i class="fa-solid fa-user"></i> Student Name <span class="required">*</span></label>
+                <input type="text" id="studentName" name="studentName" placeholder="Enter student name" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="applicationNumber"><i class="fa-solid fa-id-card"></i> Application Number <span class="required">*</span></label>
+                  <input type="text" id="applicationNumber" name="applicationNumber" placeholder="APP2025001" required>
+                </div>
+                
+                <div class="form-field">
+                  <label for="course"><i class="fa-solid fa-graduation-cap"></i> Course <span class="required">*</span></label>
+                  <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <optgroup label="Undergraduate">
+                      <option value="bca">BCA</option>
+                      <option value="bsc">B.Sc</option>
+                      <option value="ba">BA</option>
+                      <option value="bcom">B.Com</option>
+                      <option value="bba">BBA</option>
+                      <option value="be">B.E</option>
+                    </optgroup>
+                    <optgroup label="Post Graduate">
+                      <option value="mca">MCA</option>
+                      <option value="msc">M.Sc</option>
+                      <option value="mcom">M.Com</option>
+                      <option value="ma">MA</option>
+                      <option value="mba">MBA</option>
+                      <option value="me">M.E</option>
+                    </optgroup>
+                    <optgroup label="Diploma">
+                      <option value="diploma-cs">Diploma in Computer Science</option>
+                      <option value="diploma-mechanical">Diploma in Mechanical</option>
+                      <option value="diploma-civil">Diploma in Civil</option>
+                      <option value="cert-web-dev">Certification in Web Development</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Fee Selection -->
+              <div class="form-group">
+                <label for="totalAmount"><i class="fa-solid fa-indian-rupee-sign"></i> Total Amount <span class="required">*</span></label>
+                <select id="totalAmount" name="totalAmount" required onchange="updateAmount()">
+                  <option value="">Select Fee Type</option>
+                  <option value="1000">Admission Fee - ₹1,000</option>
+                  <option value="20000">Tuition Fee - ₹20,000</option>
+                  <option value="5000">Library Fee - ₹5,000</option>
+                  <option value="3000">Laboratory Fee - ₹3,000</option>
+                  <option value="2000">Examination Fee - ₹2,000</option>
+                  <option value="1500">Sports Fee - ₹1,500</option>
+                  <option value="1000">Hostel Fee (Monthly) - ₹1,000</option>
+                  <option value="500">Transportation Fee - ₹500</option>
+                  <option value="31000">Complete Fee (All Inclusive) - ₹31,000</option>
+                </select>
+              </div>
+
+              <!-- Payment Method Selection -->
+              <div class="form-group">
+                <label><i class="fa-solid fa-money-bill-wave"></i> Payment Method <span class="required">*</span></label>
+                <div class="payment-methods">
+                  <label class="payment-method-option">
+                    <input type="radio" name="paymentMethod" value="card" required onchange="showPaymentDetails()">
+                    <div class="method-box">
+                      <i class="fa-solid fa-credit-card"></i>
+                      <span>Credit/Debit Card</span>
+                    </div>
+                  </label>
+                  <label class="payment-method-option">
+                    <input type="radio" name="paymentMethod" value="upi" required onchange="showPaymentDetails()">
+                    <div class="method-box">
+                      <i class="fa-brands fa-google-pay"></i>
+                      <span>UPI</span>
+                    </div>
+                  </label>
+                  <label class="payment-method-option">
+                    <input type="radio" name="paymentMethod" value="netbanking" required onchange="showPaymentDetails()">
+                    <div class="method-box">
+                      <i class="fa-solid fa-university"></i>
+                      <span>Net Banking</span>
+                    </div>
+                  </label>
+                  <label class="payment-method-option">
+                    <input type="radio" name="paymentMethod" value="wallet" required onchange="showPaymentDetails()">
+                    <div class="method-box">
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+                      <span>Wallet</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Card Details (shown when card is selected) -->
+              <div id="cardDetails" class="payment-details" style="display: none;">
+                <div class="form-group">
+                  <label for="cardNumber"><i class="fa-solid fa-credit-card"></i> Card Number <span class="required">*</span></label>
+                  <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCardNumber(this)">
+                </div>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="expiryDate"><i class="fa-solid fa-calendar"></i> Expiry Date <span class="required">*</span></label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" oninput="formatExpiry(this)">
+                  </div>
+                  <div class="form-field">
+                    <label for="cvv"><i class="fa-solid fa-lock"></i> CVV <span class="required">*</span></label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" pattern="[0-9]{3}">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="cardHolderName"><i class="fa-solid fa-user"></i> Card Holder Name <span class="required">*</span></label>
+                  <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Name on card">
+                </div>
+              </div>
+
+              <!-- UPI Details (shown when UPI is selected) -->
+              <div id="upiDetails" class="payment-details" style="display: none;">
+                <div class="form-group">
+                  <label for="upiId"><i class="fa-brands fa-google-pay"></i> UPI ID <span class="required">*</span></label>
+                  <input type="text" id="upiId" name="upiId" placeholder="yourname@upi">
+                </div>
+                <div class="upi-apps">
+                  <p>Select UPI App:</p>
+                  <div class="upi-apps-grid">
+                    <div class="upi-app"><i class="fa-brands fa-google-pay"></i> Google Pay</div>
+                    <div class="upi-app"><i class="fa-brands fa-amazon-pay"></i> Amazon Pay</div>
+                    <div class="upi-app"><i class="fa-brands fa-cc-paypal"></i> Paytm</div>
+                    <div class="upi-app"><i class="fa-solid fa-mobile-screen-button"></i> PhonePe</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Net Banking Details -->
+              <div id="netbankingDetails" class="payment-details" style="display: none;">
+                <div class="form-group">
+                  <label for="bankName"><i class="fa-solid fa-university"></i> Select Bank <span class="required">*</span></label>
+                  <select id="bankName" name="bankName">
+                    <option value="">Select Bank</option>
+                    <option value="sbi">State Bank of India</option>
+                    <option value="hdfc">HDFC Bank</option>
+                    <option value="icici">ICICI Bank</option>
+                    <option value="axis">Axis Bank</option>
+                    <option value="pnb">Punjab National Bank</option>
+                    <option value="bob">Bank of Baroda</option>
+                    <option value="canara">Canara Bank</option>
+                    <option value="union">Union Bank of India</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Wallet Details -->
+              <div id="walletDetails" class="payment-details" style="display: none;">
+                <div class="form-group">
+                  <label for="walletType"><i class="fa-solid fa-mobile-screen-button"></i> Select Wallet <span class="required">*</span></label>
+                  <select id="walletType" name="walletType">
+                    <option value="">Select Wallet</option>
+                    <option value="paytm">Paytm</option>
+                    <option value="phonepe">PhonePe</option>
+                    <option value="amazonpay">Amazon Pay</option>
+                    <option value="freecharge">Freecharge</option>
+                    <option value="mobikwik">MobiKwik</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="walletNumber"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Number <span class="required">*</span></label>
+                  <input type="tel" id="walletNumber" name="walletNumber" placeholder="10 digit mobile number" pattern="[0-9]{10}">
+                </div>
+              </div>
+
+              <!-- Terms and Conditions -->
+              <div class="form-group terms">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="terms" name="terms" required>
+                  <span>I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></span>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-submit">
+                <button type="submit" class="submit-btn">
+                  <i class="fa-solid fa-lock"></i> Pay Now
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Side - Payment Summary -->
+          <div class="payment-summary">
+            <h2 class="summary-title"><i class="fa-solid fa-receipt"></i> Payment Summary</h2>
+            
+            <div class="summary-content">
+              <div class="summary-item">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg" alt="Student" class="summary-image">
+              </div>
+
+              <div class="summary-details">
+                <div class="summary-row">
+                  <span>Student Name:</span>
+                  <span id="summaryName">-</span>
+                </div>
+                <div class="summary-row">
+                  <span>Application No:</span>
+                  <span id="summaryApp">-</span>
+                </div>
+                <div class="summary-row">
+                  <span>Course:</span>
+                  <span id="summaryCourse">-</span>
+                </div>
+                <div class="summary-divider"></div>
+                
+                <div class="fee-breakdown">
+                  <h3><i class="fa-solid fa-list"></i> Fee Breakdown</h3>
+                  <div class="fee-item">
+                    <span>Admission Fee</span>
+                    <span>₹1,000</span>
+                  </div>
+                  <div class="fee-item">
+                    <span>Tuition Fee</span>
+                    <span>₹20,000</span>
+                  </div>
+                  <div class="fee-item">
+                    <span>Library Fee</span>
+                    <span>₹5,000</span>
+                  </div>
+                  <div class="fee-item">
+                    <span>Laboratory Fee</span>
+                    <span>₹3,000</span>
+                  </div>
+                  <div class="fee-item">
+                    <span>Examination Fee</span>
+                    <span>₹2,000</span>
+                  </div>
+                </div>
+                
+                <div class="summary-divider"></div>
+                
+                <div class="total-amount">
+                  <div class="total-row">
+                    <span><strong>Total Amount:</strong></span>
+                    <span id="summaryAmount" class="amount-highlight"><strong>₹0</strong></span>
+                  </div>
+                </div>
+
+                <div class="security-info">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <p>Your payment is secure and encrypted</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>Founded in 1995 Acharya aims to revolutionize education. With over 15,000 students and 50+ academic programs annually, it stands among the global education elite. Located in India's technical hub, Bangalore, Acharya prioritizes innovation and knowledge. The campus is spread across 80-acres and houses a centralized library, state-of-the-art laboratories,  and a 10,000+ seating stadium along with academic blocks. <br>The institution fosters experiential and collaborative learning, shaping well-rounded individuals, evident in its diverse student population from 55+ countries.</p>
+
+      <div class="icons">
+        <i class="fa-brands fa-facebook-messenger"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </section>
+
+    <!-- Javascript -->
+    <script>
+      // Toggle Menu
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+      // Update Amount in Summary
+      function updateAmount() {
+        const amount = document.getElementById("totalAmount").value;
+        const summaryAmount = document.getElementById("summaryAmount");
+        if (amount) {
+          summaryAmount.innerHTML = `<strong>₹${parseInt(amount).toLocaleString('en-IN')}</strong>`;
+        } else {
+          summaryAmount.innerHTML = `<strong>₹0</strong>`;
+        }
+      }
+
+      // Update Summary Details
+      document.getElementById("studentName").addEventListener("input", function() {
+        document.getElementById("summaryName").textContent = this.value || "-";
+      });
+
+      document.getElementById("applicationNumber").addEventListener("input", function() {
+        document.getElementById("summaryApp").textContent = this.value || "-";
+      });
+
+      document.getElementById("course").addEventListener("change", function() {
+        const selectedOption = this.options[this.selectedIndex];
+        document.getElementById("summaryCourse").textContent = selectedOption.text || "-";
+      });
+
+      // Show/Hide Payment Details based on method
+      function showPaymentDetails() {
+        const method = document.querySelector('input[name="paymentMethod"]:checked').value;
+        
+        // Hide all payment details
+        document.getElementById("cardDetails").style.display = "none";
+        document.getElementById("upiDetails").style.display = "none";
+        document.getElementById("netbankingDetails").style.display = "none";
+        document.getElementById("walletDetails").style.display = "none";
+        
+        // Show selected payment method details
+        if (method === "card") {
+          document.getElementById("cardDetails").style.display = "block";
+        } else if (method === "upi") {
+          document.getElementById("upiDetails").style.display = "block";
+        } else if (method === "netbanking") {
+          document.getElementById("netbankingDetails").style.display = "block";
+        } else if (method === "wallet") {
+          document.getElementById("walletDetails").style.display = "block";
+        }
+      }
+
+      // Format Card Number
+      function formatCardNumber(input) {
+        let value = input.value.replace(/\s/g, '');
+        let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+        input.value = formattedValue;
+      }
+
+      // Format Expiry Date
+      function formatExpiry(input) {
+        let value = input.value.replace(/\D/g, '');
+        if (value.length >= 2) {
+          value = value.substring(0, 2) + '/' + value.substring(2, 4);
+        }
+        input.value = value;
+      }
+
+      // Form Submission
+      document.getElementById("paymentForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const amount = document.getElementById("totalAmount").value;
+        const method = document.querySelector('input[name="paymentMethod"]:checked').value;
+        
+        if (confirm(`Confirm payment of ₹${parseInt(amount).toLocaleString('en-IN')} via ${method.toUpperCase()}?`)) {
+          alert("Payment processed successfully! Receipt will be sent to your email.");
+          // You can add payment processing logic here
+        }
+      });
+    </script>
+  </body>
+</html>
+

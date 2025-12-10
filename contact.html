@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="contact-style.css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="images/logo1.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Logo(about).html">ABOUT</a></li>
+            <li><a href="course.html">PROGRAMMES</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="admission.html">ADMISSIONS</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Contact Us</h1>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-section">
+      <div class="info-container">
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3>Visit Us</h3>
+          <p>Acharya University<br>Bangalore, Karnataka, India</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <h3>Call Us</h3>
+          <p>+91-12345-67890<br>+91-98765-43210</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h3>Email Us</h3>
+          <p>acharya@university.com<br>info@acharya.edu</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h3>Office Hours</h3>
+          <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="form-container">
+        <div class="form-wrapper">
+          <div class="form-content">
+            <div class="form-header">
+              <h2><i class="fa-solid fa-paper-plane"></i> Get in Touch</h2>
+              <p>Have questions about admissions, courses, or campus life? Fill the form below, and our team will get back to you as soon as possible.</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name"><i class="fa-solid fa-user"></i> Your Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email"><i class="fa-solid fa-envelope"></i> Your Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91-12345-67890">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject"><i class="fa-solid fa-tag"></i> Subject <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="admission">Admission Inquiry</option>
+                  <option value="course">Course Information</option>
+                  <option value="fees">Fee Structure</option>
+                  <option value="campus">Campus Tour</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message"><i class="fa-solid fa-message"></i> Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" required>
+                  <span>I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms & Conditions</a></span>
+                </label>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-details">
+            <div class="details-card">
+              <h3><i class="fa-solid fa-building"></i> Campus Address</h3>
+              <div class="detail-item">
+                <i class="fa-solid fa-map-marker-alt"></i>
+                <div>
+                  <p><strong>Acharya University</strong></p>
+                  <p>Bangalore, Karnataka, India</p>
+                  <p>Pin Code: 560091</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="details-card">
+              <h3><i class="fa-solid fa-phone-volume"></i> Contact Information</h3>
+              <div class="detail-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <p><strong>Phone:</strong> +91-12345-67890</p>
+                  <p><strong>Mobile:</strong> +91-98765-43210</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <p><strong>Email:</strong> acharya@university.com</p>
+                  <p><strong>Info:</strong> info@acharya.edu</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="details-card">
+              <h3><i class="fa-solid fa-clock"></i> Office Hours</h3>
+              <div class="office-hours">
+                <div class="hours-item">
+                  <span>Monday - Friday</span>
+                  <span>9:00 AM - 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                  <span>Saturday</span>
+                  <span>9:00 AM - 2:00 PM</span>
+                </div>
+                <div class="hours-item">
+                  <span>Sunday</span>
+                  <span>Closed</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="details-card social-card">
+              <h3><i class="fa-solid fa-share-nodes"></i> Follow Us</h3>
+              <div class="social-links">
+                <a href="#" class="social-link facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-link twitter"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="#" class="social-link instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-link whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <!-- <section class="map-section">
+      <div class="map-container">
+        <h2><i class="fa-solid fa-map-location-dot"></i> Find Us on Map</h2>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDAuNiJF!5e0!3m2!1sen!2sin!4v1234567890" 
+            width="100%" 
+            height="450" 
+            style="border:0; border-radius: 15px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
+      <div class="links-container">
+        <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
+        <div class="links-grid">
+          <a href="admission.html" class="quick-link">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Admissions</span>
+          </a>
+          <a href="course.html" class="quick-link">
+            <i class="fa-solid fa-book"></i>
+            <span>Courses</span>
+          </a>
+          <a href="about.html" class="quick-link">
+            <i class="fa-solid fa-info-circle"></i>
+            <span>About Us</span>
+          </a>
+          <a href="blog.html" class="quick-link">
+            <i class="fa-solid fa-blog"></i>
+            <span>Blog</span>
+          </a>
+          <a href="payment.html" class="quick-link">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Payment</span>
+          </a>
+          <a href="#" class="quick-link">
+            <i class="fa-solid fa-download"></i>
+            <span>Downloads</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>
+        Founded in 1995 Acharya aims to revolutionize education. With over 15,000 students and 50+ academic programs annually, it stands among the global education elite. Located in India's technical hub, Bangalore, Acharya prioritizes <br>innovation and knowledge. The campus is spread across 80-acres and houses a centralized library, state-of-the-art <br>laboratories, and a 10,000+ seating stadium along with academic blocks. The institution fosters experiential and <br>   collaborative learning, shaping well-rounded individuals, evident in its diverse student population from 55+ countries.
+      </p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook-messenger"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </section>
+
+    <!-- Javascript for Toggle Menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+      // Form Submission
+      document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Thank you for contacting us! We will get back to you soon.");
+        this.reset();
+      });
+    </script>
+  </body>
+</html>

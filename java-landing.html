@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Programming | One-Page Landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --java-orange: #f89820;
+      --java-dark: #0f1115;
+      --java-mid: #1b1f29;
+      --text: #e9ecf2;
+      --muted: #9da7b8;
+      --card: #161926;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 20% 20%, rgba(248, 152, 32, 0.1), transparent 30%),
+                  radial-gradient(circle at 80% 0%, rgba(248, 152, 32, 0.08), transparent 25%),
+                  var(--java-dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(15, 17, 21, 0.88);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand .dot {
+      width: 12px;
+      height: 12px;
+      background: var(--java-orange);
+      border-radius: 50%;
+      box-shadow: 0 0 16px rgba(248, 152, 32, 0.7);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--muted);
+      transition: all 0.2s ease;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+      background: rgba(248, 152, 32, 0.12);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: center;
+      gap: 30px;
+      padding: 70px 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(248, 152, 32, 0.12);
+      color: var(--java-orange);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 3vw + 1rem, 3.4rem);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: var(--java-orange);
+      color: #0d0f14;
+      box-shadow: var(--shadow);
+    }
+
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      object-fit: cover;
+      min-height: 320px;
+    }
+
+    .code-card {
+      position: absolute;
+      inset: auto 12% -12% auto;
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: var(--shadow);
+      font-family: "Source Code Pro", monospace;
+      font-size: 0.85rem;
+      color: #e8ecf8;
+      width: min(360px, 70vw);
+    }
+
+    section {
+      padding: 70px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    section p.lead {
+      color: var(--muted);
+      margin-bottom: 24px;
+      max-width: 720px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(248, 152, 32, 0.14);
+      color: var(--java-orange);
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      align-items: center;
+    }
+
+    .media {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      padding: 36px 0 48px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 10px;
+        padding: 12px 0;
+      }
+      .nav-links {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><span class="dot"></span>Java Landing</div>
+        <div class="nav-links">
+          <a href="#about" class="active">About</a>
+          <a href="#features">Features</a>
+          <a href="#why">Why Java</a>
+          <a href="#path">Learning Path</a>
+          <a href="#cta">Get Started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero" id="top">
+      <div>
+        <div class="badge">JVM • Robust • Cross-Platform</div>
+        <h1>Build scalable apps with Java.</h1>
+        <p>Java powers enterprise systems, Android apps, and high-performance backend services. Master the language, the JVM ecosystem, and modern tooling in one streamlined learning path.</p>
+        <div class="cta">
+          <a class="btn" href="#path">View the roadmap</a>
+          <a class="btn secondary" href="#about">Why Java?</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80" alt="Java programming workspace from Unsplash" />
+        <div class="code-card">
+<pre><code>public class HelloJava {
+  public static void main(String[] args) {
+    System.out.println("Ship faster with Java.");
+  }
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container two-col">
+        <div>
+          <div class="pill">About Java</div>
+          <h2>Write once, run anywhere.</h2>
+          <p class="lead">Java is a battle-tested language known for platform independence, security, and a mature ecosystem. From microservices to mobile, its versatility and tooling make it a top choice for reliable, production-grade software.</p>
+          <div class="grid">
+            <div class="card">
+              <h3>Enterprise Ready</h3>
+              <p>Trusted by banks, airlines, and governments for critical workloads.</p>
+            </div>
+            <div class="card">
+              <h3>Rich Ecosystem</h3>
+              <p>Frameworks like Spring, Quarkus, and Micronaut accelerate delivery.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1500&q=80" alt="Code on screen from Unsplash">
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="pill">Core Strengths</div>
+        <h2>What makes Java stand out</h2>
+        <p class="lead">Key capabilities that keep Java relevant across industries and architectures.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Performance</h3>
+            <p>JIT compilation and modern JVMs deliver high throughput with predictable latency.</p>
+          </div>
+          <div class="card">
+            <h3>Portability</h3>
+            <p>Compile once, run across operating systems with a consistent runtime.</p>
+          </div>
+          <div class="card">
+            <h3>Security</h3>
+            <p>Strong typing, sandboxing, and mature tooling help prevent vulnerabilities.</p>
+          </div>
+          <div class="card">
+            <h3>Community</h3>
+            <p>Vast open-source libraries, active standards (JCP), and LTS releases.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container two-col">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80" alt="Developers collaborating from Unsplash">
+        </div>
+        <div>
+          <div class="pill">Why Java Now</div>
+          <h2>Modern, cloud-ready Java.</h2>
+          <p class="lead">New releases every six months, lighter frameworks, and native image builds keep Java lean for microservices, serverless, and cloud deployments.</p>
+          <div class="grid">
+            <div class="card">
+              <h3>Cloud Native</h3>
+              <p>Graals, containers, and observability baked into modern Java stacks.</p>
+            </div>
+            <div class="card">
+              <h3>Android & Beyond</h3>
+              <p>Still a first-class language for Android and edge/IoT applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="path">
+      <div class="container">
+        <div class="pill">Learning Path</div>
+        <h2>From basics to production</h2>
+        <p class="lead">Follow these steps to become productive quickly while building portfolio-ready projects.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>1. Language Fundamentals</h3>
+            <p>Syntax, OOP, collections, generics, error handling, and streams.</p>
+          </div>
+          <div class="card">
+            <h3>2. Tooling</h3>
+            <p>Master Maven/Gradle, JUnit testing, logging, and debugging in IDEs.</p>
+          </div>
+          <div class="card">
+            <h3>3. Frameworks</h3>
+            <p>Build APIs with Spring Boot or Micronaut; connect to SQL/NoSQL stores.</p>
+          </div>
+          <div class="card">
+            <h3>4. Deployment</h3>
+            <p>Containerize with Docker, monitor with OpenTelemetry, automate CI/CD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="container two-col">
+        <div>
+          <div class="pill">Ready to code?</div>
+          <h2>Spin up your first Java project today.</h2>
+          <p class="lead">Install an LTS JDK, set up your IDE, and publish a REST API in hours. Keep iterating with tests and observability from the start.</p>
+          <div class="cta">
+            <a class="btn" href="https://adoptium.net" target="_blank" rel="noopener">Download JDK</a>
+            <a class="btn secondary" href="#top">Back to top</a>
+          </div>
+        </div>
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=1500&q=80" alt="Laptop and coffee from Unsplash">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with ❤️ using open-source images from Unsplash. Java and JVM trademarks belong to Oracle and affiliates.
+  </footer>
+
+  <script>
+    // Highlight nav link when corresponding section is in view
+    const links = document.querySelectorAll(".nav-links a");
+    const sections = Array.from(links).map(link => document.querySelector(link.getAttribute("href")));
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.toggle("active", l.getAttribute("href").slice(1) === entry.target.id));
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -40% 0px", threshold: 0.25 }
+    );
+
+    sections.forEach(section => section && observer.observe(section));
+  </script>
+</body>
+</html>
+
