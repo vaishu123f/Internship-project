@@ -39,8 +39,7 @@ A comprehensive, responsive university website built with HTML, CSS, and JavaScr
 
 ## 📁 Project Structure
 
-...
-
+```
  UNIVERSITY/
 │
 ├── index.html              # Home page
@@ -79,7 +78,8 @@ A comprehensive, responsive university website built with HTML, CSS, and JavaScr
 │   └── hblog.jpeg
 │
 └── README.md               # Project documentation
-...
+```
+
 
 
 
