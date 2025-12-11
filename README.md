@@ -38,10 +38,47 @@ A comprehensive, responsive university website built with HTML, CSS, and JavaScr
 - **Google Fonts**: Poppins font family
 
 ## 📁 Project Structure
-|
-|---index.html                     #HOME PAGE
-|---about.html/Logo(about).html    #about vision, mission ,recognitions 
-|---course.html                    #/Course/Programmes page
+
+```
+ UNIVERSITY/
+│
+├── index.html              # Home page
+├── about.html              # About page with Vision, Mission, Recognitions
+├── course.html             # Courses/Programmes page
+├── blog.html               # Blog listing page
+├── blog-post-1.html        # Individual blog post pages (1-6)
+├── blog-post-2.html
+├── blog-post-3.html
+├── blog-post-4.html
+├── blog-post-5.html
+├── blog-post-6.html
+├── contact.html            # Contact page with form
+├── admission.html          # Admission form page
+├── payment.html            # Payment processing page
+├── login.html              # Login page
+├── register.html           # Registration page
+│
+├── style.css               # Main stylesheet
+├── blog.css                # Blog page specific styles
+├── contact-style.css       # Contact page styles
+├── admission.css           # Admission page styles
+├── payment.css             # Payment page styles
+├── java-style.css          # Java course page styles
+│
+├── main.js                 # Main JavaScript file
+│
+├── images/                 # Image assets folder
+│   ├── logo1.png
+│   ├── blog1.jpeg
+│   ├── blog2.jpeg
+│   ├── blog3.jpeg
+│   ├── blog4.jpeg
+│   ├── blog5.jpeg
+│   ├── blog7.jpeg
+│   └── hblog.jpeg
+│
+└── README.md               # Project documentation
+```
 
 
 
