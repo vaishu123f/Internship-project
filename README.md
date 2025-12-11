@@ -1,7 +1,21 @@
-﻿# Internship-project
- “A responsive portfolio website built using HTML, CSS, and JavaScript to showcase my skills and projects.”
+# University Website
 
- Project name : "Acharya University"
+A comprehensive, responsive university website built with HTML, CSS, and JavaScript. This project includes multiple pages for admissions, courses, blog, contact, and payment processing.
+
+## 📋 Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Pages Overview](#pages-overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
 
 
 
