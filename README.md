@@ -8,13 +8,13 @@ A comprehensive, responsive university website built with HTML, CSS, and JavaScr
 - Technologies Used
 - Project Structure
 - Getting Started
-- [Pages Overview](#pages-overview)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- Pages Overview
+- Installation
+- Usage
+- Screenshots
+- Contributing
+- License
+- Contact
 
 
 ## ✨ Features
@@ -38,6 +38,7 @@ A comprehensive, responsive university website built with HTML, CSS, and JavaScr
 - **Google Fonts**: Poppins font family
 
 ## 📁 Project Structure
+
 
 
 
