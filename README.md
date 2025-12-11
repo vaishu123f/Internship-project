@@ -38,6 +38,11 @@ A comprehensive, responsive university website built with HTML, CSS, and JavaScr
 - **Google Fonts**: Poppins font family
 
 ## 📁 Project Structure
+|
+|---index.html                     #HOME PAGE
+|---about.html/Logo(about).html    #about vision, mission ,recognitions 
+|---course.html                    #/Course/Programmes page
+
 
 
 
